@@ -12,6 +12,7 @@ if(actionType == 1) {
     } else {
         tokens = AES.encrypt(text, KEY).toString()
     }
+    console.log(`localStorage.setItem('ghm', '${JSON.stringify(tokens)}')`);
     console.log(tokens);
 } else {
     let ciphertext = prompt('Please input ciphertext here: ');
